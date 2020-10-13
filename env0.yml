@@ -5,5 +5,5 @@ deploy:
     terraformApply:
       before:
         - |
-            pip install pyvim
+            pip install pyvmomi
             python getallvms.py            
