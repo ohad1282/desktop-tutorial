@@ -1,0 +1,9 @@
+version: 1
+
+deploy:
+  steps:
+    terraformApply:
+      before:
+        - |
+            pip install pyvim
+            python getallvms.py            
