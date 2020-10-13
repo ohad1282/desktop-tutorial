@@ -6,4 +6,5 @@ deploy:
       before:
         - |
             pip3 install pyvmomi
+            pip3 install pyserial
             python3 getallvms.py            
