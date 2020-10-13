@@ -7,4 +7,4 @@ deploy:
         - |
             pip3 install pyvmomi
             pip3 install pyserial
-            python3 getallvms.py            
+            python3 getallvms.py -s $HOST [-o $PORT] -u $USER [-p $PASSWORD]
