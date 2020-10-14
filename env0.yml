@@ -5,7 +5,9 @@ deploy:
     terraformApply:
       before:
         - |
+            touch timtest.ovf
+            touch timtest.vmdk        
             pip3 install pyvmomi
             python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
             python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S -f timtest.ovf -v timtest.vmdk
-            
+
