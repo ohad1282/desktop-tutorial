@@ -7,4 +7,4 @@ deploy:
         - |
             pip3 install pyvmomi
             python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
-            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S -f "[datastore1] env0 - VM - Thin.ovf" -v "[datastore1] env0 - VM - Thin-1.vmdk"
+            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S -f "env0 - VM - Thin.ovf" -v "env0 - VM - Thin-1.vmdk"
