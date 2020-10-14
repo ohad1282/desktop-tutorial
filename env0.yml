@@ -1,0 +1,9 @@
+version: 1
+
+deploy:
+  steps:
+    terraformApply:
+      before:
+        - |
+            pip3 install pyvmomi
+            python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
