@@ -18,6 +18,8 @@ from getpass import getpass
 from pyVim import connect
 from pyVmomi import vim
 
+import tools.cli as cli
+
 
 def get_args():
     """
@@ -175,7 +177,7 @@ def main():
     args = get_args()
     ovfd = get_ovf_descriptor(args.ovf_path)
     try:
-        si = connect.SmartConnect(host=args.host,
+        si = connect.SmartConnectNoSSL(host=args.host,
                                   user=args.user,
                                   pwd=args.password,
                                   port=args.port)
