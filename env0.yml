@@ -12,8 +12,8 @@ deploy:
 #            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f timtest.ovf -v timtest.vmdk
 destroy:
   steps:
-    terraformApply:
+    terraformDestroy:
       before:
         - |     
             pip3 install pyvmomi
-            echo testing             
+            echo testing       
