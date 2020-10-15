@@ -7,7 +7,13 @@ deploy:
         - |      
             pip3 install pyvmomi
             pip3 install cot
-            cot deploy 
+#            cot deploy 
 #            #python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
 #            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f timtest.ovf -v timtest.vmdk
-
+destroy:
+  steps:
+    terraformApply:
+      before:
+        - |     
+            pip3 install pyvmomi
+            echo testing             
