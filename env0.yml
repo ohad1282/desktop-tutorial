@@ -7,7 +7,7 @@ deploy:
         - |      
             pip3 install pyvmomi
             pip3 install cot
-            wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf 
+            wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf
             cot deploy timtest.ovf esxi $HOST -u $USER -p $PASSWORD -n TimTest1
 #            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf -v https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk
 #            #python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
