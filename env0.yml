@@ -7,14 +7,14 @@ deploy:
         - |      
             pip3 install pyvmomi
             pip3 install cot
-            cot install-helpers --verify-only
+            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf -v https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk
 #            cot deploy 
 #            #python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
-#            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f timtest.ovf -v timtest.vmdk
+            #python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f timtest.ovf -v timtest.vmdk
 destroy:
   steps:
     terraformDestroy:
       before:
         - |     
             pip3 install pyvmomi
-            echo testing       
+            echo testing
