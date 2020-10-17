@@ -5,6 +5,7 @@ deploy:
     terraformApply:
       before:
         - |      
+            df -h
             pip3 install pyvmomi
             pip3 install cot
             chmod 755 VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle
