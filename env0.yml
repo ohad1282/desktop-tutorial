@@ -7,7 +7,7 @@ deploy:
         - |      
             pip3 install pyvmomi
             pip3 install cot
-            chmod +x ovftool.bundle
+            chmod 755 ovftool.bundle
             ./ovftool.bundle
             wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf
             wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk 
@@ -21,4 +21,4 @@ destroy:
       before:
         - |     
             pip3 install pyvmomi
-            echo testing
+            echo Remember to add destroy steps here when you get a successful deploy step....
