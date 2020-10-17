@@ -7,8 +7,8 @@ deploy:
         - |      
             pip3 install pyvmomi
             pip3 install cot
-            chmod 755 ovftool.bundle
-            ./ovftool.bundle
+            chmod 755 VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle
+            ./VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle
             wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf
             wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk 
             cot deploy timtest.ovf esxi $HOST -u $USER -p $PASSWORD -n TimTest1
