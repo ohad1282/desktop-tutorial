@@ -5,8 +5,14 @@ deploy:
     terraformApply:
       before:
         - |      
+            df -h
+            pip3 install pyvmomi
+            pip3 install cot
             chmod 755 VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle
             /bin/sh VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle --console --required --eulas-agreed
+            wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf
+            wget https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk 
+            cot deploy timtest.ovf esxi $HOST -u $USER -p $PASSWORD -n TimTest1
 #            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf -v https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk
 #            #python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
             #python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f timtest.ovf -v timtest.vmdk
