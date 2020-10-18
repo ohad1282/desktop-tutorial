@@ -5,7 +5,7 @@ deploy:
     terraformApply:
       before:
         - |      
-            sh ./VMware-ovftool-4.3.0-7948156-lin.x86_64.bundle --extract ./ovftoolfiles/
+            sh ./VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle --extract ./ovftoolfiles/
 #            python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.ovf -v https://env0-vsphere-test.s3.us-east-2.amazonaws.com/timtest.vmdk
 #            #python3 getallvms.py -s $HOST -o $PORT -u $USER -p $PASSWORD -S
             #python3 deploy-ovf.py -s $HOST -o $PORT -u $USER -p $PASSWORD -f timtest.ovf -v timtest.vmdk
