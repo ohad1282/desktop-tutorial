@@ -6,13 +6,8 @@ deploy:
       before:
         - echo "1"
       after:
-        - echo "2"
-    
-    terraformPlanApproval:
-      before:
-        - echo "3"
-      after:
-        - echo "4"
+        - echo "checking if env is aaa"
+	- exit 1
 
     terraformApply:
       before:
