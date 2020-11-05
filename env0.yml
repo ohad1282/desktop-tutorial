@@ -7,7 +7,7 @@ deploy:
         - echo "1"
       after:
         - echo "checking if env is aaa"
-	- exit 1
+        - exit 1
 
     terraformApply:
       before:
