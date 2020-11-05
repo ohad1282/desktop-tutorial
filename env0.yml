@@ -5,3 +5,4 @@ deploy:
     terraformPlan:
       after:
         - echo "checking if env is the default environment"
+        - sleep 30
