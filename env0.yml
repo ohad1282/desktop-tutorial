@@ -2,7 +2,7 @@ version: 1
 
 deploy:
   steps:
-    terraformPlan:
+    storeState:
       after:
         - echo "checking if env is the default environment"
-        - sleep 30
+        - sleep 10
