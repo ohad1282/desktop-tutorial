@@ -3,11 +3,8 @@ version: 1
 deploy:
   steps:
     terraformPlan:
-      before:
-        - echo "1"
       after:
-        - echo "checking if env is aaa"
-        - exit 1
+        - echo "checking if env is the default environment"
 
     terraformApply:
       before:
