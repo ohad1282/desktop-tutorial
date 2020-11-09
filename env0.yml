@@ -5,4 +5,3 @@ deploy:
     terraformPlan:
       after:
         - echo "aaa"
-        - false
