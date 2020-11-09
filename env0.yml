@@ -4,5 +4,4 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - echo "aaa"
-        - false
+        - echo "aaa"; false
