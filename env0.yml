@@ -4,4 +4,4 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - echo "aaa"; false 1>&2
+        - echo "aaa" 1>&2 && exit 1
