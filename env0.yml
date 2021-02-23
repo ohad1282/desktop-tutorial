@@ -1,8 +1,0 @@
-version: 1
-
-deploy:
-  steps:
-    terraformPlan:
-      after:
-        - git branch
-        - echo "aaa" 1>&2 && exit 1
