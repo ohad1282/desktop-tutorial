@@ -10,3 +10,7 @@ resource "random_id" "id" {
 resource "random_id" "id3" {
   byte_length = 8
 }
+
+resource "random_id" "id4" {
+  byte_length = 8
+}
