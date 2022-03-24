@@ -61,3 +61,4 @@ resource "aws_s3_bucket_object" "object" {
   source = "../index.html"
   content_type = "text/html"
 }
+
