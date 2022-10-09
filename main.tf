@@ -62,3 +62,5 @@ resource "aws_s3_bucket_object" "object" {
   content_type = "text/html"
 }
 
+
+
